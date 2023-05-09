@@ -15,12 +15,15 @@ pipeline {
                   java -version'''
           }
         }
+
       }
     }
+
     stage('Post Build Steps') {
-          steps {
-            writeFile(file: 'status.txt', text: 'Hey it worked!!!')
-          }
+      steps {
+        writeFile(file: 'status.txt', text: 'Hey it worked!!!')
+      }
     }
-   }
-} 
+
+  }
+}
