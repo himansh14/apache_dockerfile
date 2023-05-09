@@ -3,7 +3,6 @@ pipeline {
     dockerfile {
       filename 'Dockerfile'
     }
-
   }
   stages {
     stage('Post Build Steps') {
@@ -11,6 +10,5 @@ pipeline {
         writeFile(file: 'status.txt', text: 'Hey it worked!!!')
       }
     }
-
   }
 }
