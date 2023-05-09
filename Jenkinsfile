@@ -34,6 +34,7 @@ touch "target/sample.txt"'''
           agent {
             docker {
               image 'tomcat'
+              args '-u 0:0'
             }
 
           }
